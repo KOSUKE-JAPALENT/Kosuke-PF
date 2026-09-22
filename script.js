@@ -31,6 +31,34 @@ const translations = {
     storyP4: "リモート出稼ぎ大学を立ち上げ、1年後に株式会社Japalentを設立。今は、当時の自分に届けたかった未来を、仲間と一緒につくっています。",
     storyQuote: "日本人のソフトスキルは確実に世界をより良くするパワーになります。その事実を日本人に広げるために、僕は会社を立ち上げました。",
     curiosityQuote: "僕を突き動かすものはいつだって好奇心です。",
+    remoteEyebrow: "GLOBAL REMOTE WORK",
+    remoteExplainerTitle: "海外リモートワーク<br><em>とは？</em>",
+    remoteExplainerLead: "日本にいながら、海外の企業やクライアントとオンラインで仕事をする働き方です。英語が完璧でなくても、日本語や日本人ならではの丁寧さ・責任感が武器になる案件も多くあります。",
+    remoteBenefit1Title: "場所を選ばない",
+    remoteBenefit1Desc: "地方・自宅・カフェから、世界の仕事ができます。Uターンや移住と両立しやすい働き方です。",
+    remoteBenefit2Title: "外貨・高単価の案件",
+    remoteBenefit2Desc: "時給や月単価で、国内案件より高い報酬を得られるケースがあります。スキル次第で収入の上限も広がります。",
+    remoteBenefit3Title: "未経験から始められる",
+    remoteBenefit3Desc: "主婦や大学生でも、誰でも始められるのが特徴です。年齢も関係ありません。退職後のセカンドキャリアとして考えるのもアリです。",
+    remoteBenefit4Title: "キャリアの選択肢が増える",
+    remoteBenefit4Desc: "副業・独立・転職。国内だけに依存しないキャリア設計が可能になります。",
+    remoteWhyTitle: "なぜ、広まるべきなのか",
+    remoteWhyP: "日本の市場だけに閉じず、海外にも仕事の場を広げていく。外貨を獲得し、日本人が世界で活躍する人数を増やす。それが、日本という国をパワーアップさせる道だと僕は思っています。海外リモートワークは、グローバル化を個人のキャリアから推進できる働き方。特別な一部の人だけのものではなく、当たり前の選択肢にしていきたい。それが僕のミッションです。",
+    remoteJobsTitle: "具体的な仕事の例",
+    remoteJobsLead: "実際に日本人が挑戦している、または需要が高い職種の一例です。",
+    remoteJob1: "カスタマーサポート",
+    remoteJob2: "AI学習データ",
+    remoteJob3: "Virtual Assistant",
+    remoteJob4: "コンテンツライティング",
+    remoteJob5: "翻訳",
+    remoteJob6: "ローカライズ",
+    remoteJob7: "マーケティング",
+    remoteJob8: "ウェブデザイン",
+    remoteJob9: "プログラミング",
+    remoteJob10: "オンライン日本語講師",
+    remotePostsTitle: "海外リモートワークの具体例（X）",
+    remotePostsLead: "僕がX（@kosuke_dekasegi）で発信している、海外リモートワークの紹介ポストです。",
+    remotePostsMore: "@kosuke_dekasegi のポストをもっと見る ↗",
     videoTitle: "新卒2か月退職・コンビニ店員だった僕が、1年で人生逆転できた理由",
     workEyebrow: "WHAT I DO",
     workTitle: "日本人と世界をつなぐ、<br><em>3つの挑戦。</em>",
@@ -121,6 +149,34 @@ const translations = {
     storyP4: "I built Remote Dekasegi University, and one year later founded Japalent Inc. Today I am building the future I once wished someone had shown me—together with our community.",
     storyQuote: "Japanese soft skills can make the world better. I started this company to spread that truth across Japan.",
     curiosityQuote: "What drives me has always been curiosity.",
+    remoteEyebrow: "GLOBAL REMOTE WORK",
+    remoteExplainerTitle: "What is<br><em>global remote work?</em>",
+    remoteExplainerLead: "Working online with overseas companies and clients while living in Japan. You do not need perfect English—many projects value Japanese language skills, reliability, and cultural strengths.",
+    remoteBenefit1Title: "Work from anywhere",
+    remoteBenefit1Desc: "Work from home, a café, or a rural town. It is easier to combine with relocation or a return to your hometown.",
+    remoteBenefit2Title: "Foreign income and higher rates",
+    remoteBenefit2Desc: "Some projects pay more than typical domestic work, whether hourly or monthly. Your earning ceiling can grow with your skills.",
+    remoteBenefit3Title: "Start without experience",
+    remoteBenefit3Desc: "Homemakers, university students, anyone can start. Age does not matter. It can also be a strong option for a second career after retirement.",
+    remoteBenefit4Title: "More career options",
+    remoteBenefit4Desc: "Side work, independence, or a career change—global remote work helps you build a career that is not limited to the domestic market.",
+    remoteWhyTitle: "Why it should become normal",
+    remoteWhyP: "Instead of staying inside the domestic market alone, we can expand into global work. Earn foreign income and increase the number of Japanese people succeeding worldwide. That is how we power up Japan as a country. Global remote work is a way to advance globalization from individual careers. I want it to become a normal option—not something reserved for a select few. That is my mission.",
+    remoteJobsTitle: "Examples of real work",
+    remoteJobsLead: "Roles that Japanese professionals are already pursuing—or where demand is growing.",
+    remoteJob1: "Customer support",
+    remoteJob2: "AI training data",
+    remoteJob3: "Virtual Assistant",
+    remoteJob4: "Content writing",
+    remoteJob5: "Translation",
+    remoteJob6: "Localization",
+    remoteJob7: "Marketing",
+    remoteJob8: "Web design",
+    remoteJob9: "Programming",
+    remoteJob10: "Online Japanese instructor",
+    remotePostsTitle: "Real examples on X",
+    remotePostsLead: "Posts from @kosuke_dekasegi introducing global remote work opportunities.",
+    remotePostsMore: "See more posts from @kosuke_dekasegi ↗",
     videoTitle: "How I turned my life around in one year after quitting my first job and working at a convenience store",
     workEyebrow: "WHAT I DO",
     workTitle: "Three ways to connect<br><em>Japanese talent with the world.</em>",
@@ -233,7 +289,7 @@ window.addEventListener("scroll", () => {
 }, { passive: true });
 
 const sectionNavLinks = document.querySelectorAll(".section-nav a");
-const sections = ["story", "work", "impact", "news", "media", "vision"].map((id) => document.getElementById(id));
+const sections = ["story", "remote", "work", "impact", "news", "media", "vision"].map((id) => document.getElementById(id));
 
 const sectionObserver = new IntersectionObserver(
   (entries) => {
@@ -283,6 +339,52 @@ if (slideshow) {
   });
 
   startSlideshow();
+}
+
+const xCarousel = document.querySelector("[data-x-carousel]");
+if (xCarousel) {
+  const track = xCarousel.querySelector(".x-carousel-track");
+  const slides = xCarousel.querySelectorAll(".x-carousel-slide");
+  const dots = xCarousel.querySelectorAll(".x-carousel-dots span");
+  const prevBtn = xCarousel.querySelector("[data-x-prev]");
+  const nextBtn = xCarousel.querySelector("[data-x-next]");
+  let index = 0;
+  let timer;
+
+  const showSlide = (next) => {
+    index = (next + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === index);
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === index);
+    });
+  };
+
+  const startCarousel = () => {
+    clearInterval(timer);
+    timer = setInterval(() => showSlide(index + 1), 8000);
+  };
+
+  prevBtn?.addEventListener("click", () => {
+    showSlide(index - 1);
+    startCarousel();
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    showSlide(index + 1);
+    startCarousel();
+  });
+
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener("click", () => {
+      showSlide(dotIndex);
+      startCarousel();
+    });
+  });
+
+  startCarousel();
 }
 
 setLanguage(currentLanguage);
