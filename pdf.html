@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>鈴木孝輔｜会社概要</title>
+  <style>
+    @page { size: A4; margin: 16mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.65;
+      color: #1a1a1a;
+      margin: 0;
+    }
+    .page { page-break-after: always; }
+    .page:last-child { page-break-after: auto; }
+    h1 {
+      font-size: 22pt;
+      margin: 0 0 6px;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .subtitle {
+      font-size: 11pt;
+      color: #555;
+      margin-bottom: 18px;
+    }
+    h2 {
+      font-size: 12pt;
+      margin: 18px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #ccc;
+      color: #222;
+    }
+    h3 {
+      font-size: 10.5pt;
+      margin: 12px 0 4px;
+      color: #333;
+    }
+    p { margin: 0 0 8px; }
+    .lead { font-size: 11pt; color: #333; margin-bottom: 14px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 120px;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+    .hero img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 10px 0 14px;
+    }
+    .metric {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 8px;
+      text-align: center;
+      background: #fafafa;
+    }
+    .metric strong {
+      display: block;
+      font-size: 14pt;
+      color: #222;
+      line-height: 1.2;
+    }
+    .metric span { font-size: 8.5pt; color: #666; }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .service {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 10px;
+      background: #fcfcfc;
+    }
+    .service h3 { margin-top: 0; }
+    .cases {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .case {
+      border-left: 3px solid #666;
+      padding: 8px 10px;
+      background: #f7f7f7;
+    }
+    .case-label {
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #777;
+      margin-bottom: 4px;
+    }
+    .partners {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .partners img {
+      height: 36px;
+      object-fit: contain;
+      filter: grayscale(1);
+      opacity: 0.85;
+    }
+    .contact-box {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+    .contact-box a { color: #0b57d0; text-decoration: none; }
+    .note { font-size: 8pt; color: #777; margin-top: 10px; }
+    ul { margin: 4px 0 8px; padding-left: 18px; }
+    li { margin-bottom: 3px; }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="hero">
+      <div>
+        <h1>鈴木孝輔（こうすけ）</h1>
+        <p class="subtitle">株式会社Japalent 代表取締役 ／ リモート出稼ぎ大学 学長</p>
+        <p class="lead">海外リモートを、日本の当たり前に。<br>日本人の才能と、世界の仕事をつなぐ。</p>
+      </div>
+      <img src="assets/ceo.jpg" alt="鈴木孝輔" />
+    </div>
+
+    <h2>自己紹介</h2>
+    <p>2000年生まれ。海外リモートワークの提唱者として、YouTube・コミュニティ・法人事業を通じて「日本にいながら世界と働く」選択肢を広めています。</p>
+
+    <h2>ストーリー（要約）</h2>
+    <p>新卒2か月でパニック障害により退職。事業の失敗を重ね、早朝のコンビニ勤務を経験。その後、海外リモートワークとの出会いで人生が動き始めました。同じように悩む人へ選択肢を届けたいという想いで、YouTube・コミュニティ・株式会社Japalentを立ち上げました。</p>
+
+    <h2>主な実績</h2>
+    <div class="metrics">
+      <div class="metric"><strong>23,700+</strong><span>YouTube登録者</span></div>
+      <div class="metric"><strong>500+</strong><span>指導実績</span></div>
+      <div class="metric"><strong>100%*</strong><span>受講生満足度</span></div>
+      <div class="metric"><strong>1.1M+</strong><span>YouTube総再生</span></div>
+    </div>
+    <p class="note">*自社アンケートによる。YouTube数値は2026年9月時点。</p>
+  </section>
+
+  <section class="page">
+    <h2>事業</h2>
+    <div class="services">
+      <div class="service">
+        <h3>リモート出稼ぎ大学</h3>
+        <p>海外リモートワークに挑戦する日本人のための学習コミュニティ。初心者が最初の海外案件を獲得するまで伴走します。</p>
+      </div>
+      <div class="service">
+        <h3>LinkWay</h3>
+        <p>LinkedInを活用し、日本にいながら海外案件・外貨獲得を目指すコミュニティ。プロフィール、発信、案件獲得を支援します。</p>
+      </div>
+      <div class="service">
+        <h3>Japalent Projects</h3>
+        <p>日本人人材ネットワークと海外案件の知見を活かし、AI・日本語データ・教育・CX領域で企業との共同プロジェクトを推進。</p>
+      </div>
+    </div>
+
+    <h2>成功事例</h2>
+    <div class="cases">
+      <div class="case">
+        <div class="case-label">CASE 01</div>
+        <p>家がなくネットカフェで暮らしていた若者が、YouTubeをきっかけに海外リモートへ挑戦。月20万円達成後、実家へ。現在は月50万円以上を獲得するフリーランスに。</p>
+      </div>
+      <div class="case">
+        <div class="case-label">CASE 02</div>
+        <p>副業で長期間成果が出なかった会社員が、1か月間の伴走で初収益を達成。退職後、現在はJapalentの仲間として活動。</p>
+      </div>
+    </div>
+    <p class="note">※本人から共有された個別事例です。成果には個人差があり、収入や案件獲得を保証するものではありません。</p>
+
+    <h2>協業パートナー</h2>
+    <div class="partners">
+      <img src="assets/ccc-logo.png" alt="CCC Kimura Office" />
+      <img src="assets/partner-colorwith.jpg" alt="Color WiTh株式会社" />
+      <img src="assets/partner-fukugyou-academy.jpg" alt="複業アカデミー" />
+    </div>
+  </section>
+
+  <section class="page">
+    <h2>ビジョン（今後3年）</h2>
+    <p>海外リモートワークを、特別な選択肢ではなく、誰もが知る当たり前のキャリアにする。</p>
+    <ul>
+      <li>海外クライアントと、日本のチームをつなぐ</li>
+      <li>同じ志を持つ企業・パートナーと共創する</li>
+      <li>世界へ挑戦する若い世代を増やす</li>
+    </ul>
+    <p>礼儀正しさ、責任感、丁寧さ。日本では当たり前のソフトスキルが、世界では大きな価値になる。日本人がグローバルな視点を持ち、その才能で世界の仕事を前に進めていく社会をつくります。</p>
+
+    <h2>お問い合わせ</h2>
+    <div class="contact-box">
+      <p><strong>まずは1on1で話しましょう。</strong></p>
+      <p>海外クライアント、企業パートナー、採用、取材など。具体的な企画が決まっていなくても構いません。</p>
+      <p>メール：<a href="mailto:kosuke.remote.work@gmail.com">kosuke.remote.work@gmail.com</a></p>
+      <p>LinkedIn：<a href="https://www.linkedin.com/in/kosukejapalent/">linkedin.com/in/kosukejapalent</a></p>
+      <p>Web：<a href="https://www.japalent.com/">japalent.com</a></p>
+    </div>
+    <p class="note">作成日：2026年9月18日 ／ 鈴木孝輔（こうすけ）</p>
+  </section>
+</body>
+</html>

@@ -22,3 +22,22 @@
 - `styles.css`：デザイン・レスポンシブ対応
 - `script.js`：日英切替・スクロール表示
 - `assets/`：写真・ロゴ
+- `pdf.html`：商談前共有用PDFの元HTML
+- `鈴木孝輔_会社概要.pdf`：商談前共有用PDF（落ち着いたトーン）
+- `slides-content.md`：登壇資料10枚の原稿
+- `鈴木孝輔_登壇資料.pptx`：登壇資料PPTX（Google Slidesへ取り込み可）
+
+## 資料の再生成
+
+```bash
+# PDF
+cd scripts/generate-portfolio-pdf
+npm run generate
+
+# PPTX
+node generate-slides.js
+
+# Google Slidesへアップロード
+cd ../google-docs
+node upload-portfolio-slides.mjs
+```
