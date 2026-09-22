@@ -499,11 +499,19 @@ h2 em {
   position: relative;
 }
 
+.story-photo,
 .story-slideshow {
   position: relative;
   overflow: hidden;
   aspect-ratio: 3 / 4;
   background: var(--black-card);
+}
+
+.story-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
 }
 
 .story-slideshow-track {
