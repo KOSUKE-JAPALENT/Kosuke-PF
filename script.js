@@ -110,9 +110,9 @@ const translations = {
     visionPoint1: "海外リモートワークを当たり前に",
     visionPoint2: "LinkedInを日本で当たり前に",
     visionPoint3: "世界への挑戦を当たり前に",
-    faqEyebrow: "50 QUESTIONS",
-    faqTitle: "こうすけの<br><em>50の質問。</em>",
-    faqIntro: "仕事の話ばかりじゃない。食べ物から性格まで、50の質問にざっくばらんに答えました。",
+    faqEyebrow: "ABOUT ME",
+    faqTitle: "こうすけの<br><em>質問箱。</em>",
+    faqIntro: "仕事の話ばかりじゃない。食べ物から性格まで、ざっくばらんに答えました。",
     faqCatFood: "食べ物・日常",
     faqCatPersonality: "性格・価値観",
     faqCatWork: "仕事・働き方",
@@ -236,9 +236,9 @@ const translations = {
     visionPoint1: "Make global remote work normal",
     visionPoint2: "Make LinkedIn normal in Japan",
     visionPoint3: "Make global ambition normal",
-    faqEyebrow: "50 QUESTIONS",
-    faqTitle: "50 Questions<br><em>About Kosuke.</em>",
-    faqIntro: "Not just work talk. 50 casual questions — from food to personality.",
+    faqEyebrow: "ABOUT ME",
+    faqTitle: "Kosuke's<br><em>Question Box.</em>",
+    faqIntro: "Not just work talk. Casual answers — from food to personality.",
     faqCatFood: "Food & Daily Life",
     faqCatPersonality: "Personality & Values",
     faqCatWork: "Work & Habits",
@@ -258,76 +258,76 @@ const faqData = {
     {
       category: "faqCatFood",
       items: [
-        { q: "好きな食べ物は？", a: "シチュー、かぼちゃサラダ、キリートレモン、サラダボウル屋さん。" },
-        { q: "コンビニでよく買うお菓子は？", a: "ポイフル。ポイフル。" },
-        { q: "朝ごはん派？夜ごはん派？", a: "朝ごはんは食べないので、夜ごはん派です。" },
-        { q: "コーヒー派？紅茶派？", a: "コーヒー派です。だけど紅茶も大好き。そば茶も好きです。" },
-        { q: "好きな料理の系統は？", a: "イタリアンです。" },
-        { q: "ストレスのとき食べるものは？", a: "ペヤングの焼きそば。" },
-        { q: "人生で一番おいしかったものは？", a: "トラチビール。" },
-        { q: "朝型？夜型？", a: "朝方です。10時半くらいに起きます。" },
-        { q: "1日で一番好きな時間帯は？", a: "昼ですね。" },
-        { q: "休日の過ごし方は？", a: "休日なんてない。……嘘です。旅をします。トレンドのものを見ること。読書。" },
-        { q: "旅行は国内？海外？", a: "国内が多いですが、海外も行きたいです。" },
-        { q: "行ってみたい国は？", a: "フィンランド。" },
-        { q: "運動はする？", a: "めっちゃします。ランニング、筋トレ、ヨガ。" },
-        { q: "スマホで一番使うアプリは？", a: "ChatGPT。" },
-        { q: "部屋のこだわりポイントは？", a: "小学生の頃から使っている机。" },
-        { q: "無人島に1つだけ持っていくなら？", a: "綺麗なお姉さん。" },
-        { q: "起きて最初にすることは？", a: "うんち。" }
+        { q: "好きな食べ物は？", a: "シチュー・キリートレモン・サラダボウル" },
+        { q: "好きなお菓子は？", a: "ポイフル" },
+        { q: "甘いもの派？しょっぱいもの派？", a: "甘いもの派" },
+        { q: "コーヒー派？紅茶派？", a: "コーヒー派です、だけど紅茶も大好き、そば茶も好きです" },
+        { q: "好きな料理の系統は？", a: "イタリアンです" },
+        { q: "ストレスのとき食べるものは？", a: "ペヤングの焼きそば" },
+        { q: "美味しかったものは？", a: "ソラチビール（北海道のご当地ビール）" },
+        { q: "朝型？夜型？", a: "良く寝る型" },
+        { q: "1日の中で好きな時間は？", a: "15:00くらいの運動の時間！" },
+        { q: "休日の過ごし方は？", a: "休日なんてない……嘘です、旅をします、トレンドのものを見ること、読書" },
+        { q: "旅行は国内？海外？", a: "国内が多いですが、海外も行きたいです" },
+        { q: "行ってみたい国は？", a: "フィンランド" },
+        { q: "運動はする？", a: "めっちゃします、ランニング、筋トレ、ヨガ" },
+        { q: "スマホでよく使うアプリは？", a: "ChatGPTとObsidian" },
+        { q: "部屋のこだわりポイントは？", a: "小学生の頃から使っている机" },
+        { q: "無人島に1つだけ持っていくなら？", a: "綺麗なお姉さん" },
+        { q: "起きて最初にすることは？", a: "うんち" }
       ]
     },
     {
       category: "faqCatPersonality",
       items: [
-        { q: "自分を3文字で表すと？", a: "AHO。アホ。" },
-        { q: "友達に言われる自分の性格は？", a: "明るい、うるさい、変、怒られやすい。" },
-        { q: "完璧主義派？", a: "完璧主義の中では適当派かも。仕事では考えて動くけど、プライベートは直感派。" },
-        { q: "一人の時間と、人といる時間どっちが好き？", a: "人といる時間が好きです。" },
-        { q: "最近「これ大事だな」と思ったことは？", a: "好奇心。" },
-        { q: "尊敬している人は？", a: "出口春明さん。" },
-        { q: "子供の頃になりたかった職業は？", a: "窓拭く人。" },
-        { q: "10年後、どんな自分でいたい？", a: "石像を建てられるぐらいの人。" },
-        { q: "超能力が1つ使えるなら？", a: "どこでもドアみたいな。いや、ルーラーですね。どこでも移動できるやつ。" },
-        { q: "過去の自分にLINEで1通送るなら？", a: "頑張れ。" },
-        { q: "人生で一番「変だな」と言われたことは？", a: "文化祭の練習で、一人でクラス全員の前で踊った時。" }
+        { q: "自分を3文字で表すと？", a: "AHO、アホ" },
+        { q: "友達に言われる自分の性格は？", a: "明るい、うるさい、変、怒られやすい" },
+        { q: "完璧主義派？", a: "完璧主義の中では適当派かも、仕事では考えて動くけど、プライベートは直感派" },
+        { q: "一人の時間と、人といる時間どっちが好き？", a: "人といる時間が好きです" },
+        { q: "最近「これ大事だな」と思ったことは？", a: "好奇心" },
+        { q: "尊敬している人は？", a: "出口治明" },
+        { q: "子供の頃になりたかった職業は？", a: "窓拭く人" },
+        { q: "10年後、どんな自分でいたい？", a: "石像を建てられるぐらいの人" },
+        { q: "超能力が1つ使えるなら？", a: "どこでも移動できる力！" },
+        { q: "過去の自分にLINEで1通送るなら？", a: "頑張れ" },
+        { q: "人生で一番「変だな」と言われたことは？", a: "文化祭の練習で、一人でクラス全員の前で踊った時" }
       ]
     },
     {
       category: "faqCatWork",
       items: [
-        { q: "仕事中に聴くBGMはある？", a: "中では聴きません。" },
-        { q: "作業する時の定位置は？", a: "デスク。小学生の机。" },
-        { q: "1日何時間くらいPCに触ってる？", a: "10時間くらい。" },
-        { q: "仕事の合間に何をする？", a: "なんか歩く。" },
-        { q: "モチベーションが上がる瞬間は？", a: "新しい目標が決まった時。" },
-        { q: "モチベーションが下がる瞬間は？", a: "慣れた時、いろいろ。" },
-        { q: "仕事で一番楽しいところは？", a: "目標を達成した時。" },
-        { q: "仕事で一番大変なところは？", a: "目標を達成できない時。" },
-        { q: "会議中、内心どこにいる？", a: "内心どこにいる？そんなこと思ったことはない。会議の一つ一つに全力で集中しています。かっこ真面目。" }
+        { q: "仕事中に聴くBGMはある？", a: "仕事中は音楽聞きません" },
+        { q: "作業する時の定位置は？", a: "デスク、小学生の机" },
+        { q: "1日何時間くらいPCに触ってる？", a: "10時間くらい" },
+        { q: "仕事の合間に何をする？", a: "なんか歩く" },
+        { q: "モチベーションが上がる瞬間は？", a: "新しい目標が決まった時" },
+        { q: "モチベーションが下がる瞬間は？", a: "慣れた時、いろいろ" },
+        { q: "仕事で一番楽しいところは？", a: "目標を達成した時" },
+        { q: "仕事で一番大変なところは？", a: "目標を達成できない時" },
+        { q: "会議中、内心どこにいる？", a: "会議の一つ一つに全力で集中しています（真面目）" }
       ]
     },
     {
       category: "faqCatEntertainment",
       items: [
-        { q: "好きなYouTuber・クリエイターは？", a: "東海オンエア。" },
-        { q: "最近見た映画・ドラマでオススメは？", a: "オフラインラブ。" },
-        { q: "好きな音楽ジャンルは？", a: "男性アイドル、カッコ、J-POP。" },
-        { q: "カラオケでよく歌う曲は？", a: "CHAGE and ASKAの「Say Yes」。" },
-        { q: "ゲームはする？", a: "するするならする。しないけど、最近ドラクエやってる。" },
-        { q: "本は読む？", a: "読みます。全ジャンル大好き。" }
+        { q: "好きなYouTuber・クリエイターは？", a: "東海オンエア" },
+        { q: "最近見た映画・ドラマでオススメは？", a: "オフラインラブ" },
+        { q: "好きな音楽ジャンルは？", a: "男性アイドル（J-POP）" },
+        { q: "カラオケでよく歌う曲は？", a: "CHAGE and ASKAの「Say Yes」" },
+        { q: "ゲームはする？", a: "しないけど、最近ドラクエやってる" },
+        { q: "本は読む？", a: "読みます、全ジャンル大好き" }
       ]
     },
     {
       category: "faqCatSocial",
       items: [
-        { q: "初対面の人と話すのは得意？苦手？", a: "得意です。みんな話して。" },
-        { q: "LINEの返信は早い？遅い？", a: "好きな人には早い。" },
-        { q: "チームで働くのと一人で働くの、どっちが好き？", a: "本当は一人だけど、チームで働かないとやっていけない。" },
-        { q: "仲間に求めるものは？", a: "愛。" },
-        { q: "もし一週間何もしなくていいなら何をする？", a: "仕事。" },
-        { q: "宝くじ10億円当たったら最初に何をする？", a: "世界一周旅行。" },
-        { q: "SNSの自分とリアルの自分、ギャップある？", a: "めちゃくちゃあります。実際に会うと「思ったより静かですね」って、いつも言われます。" }
+        { q: "初対面の人と話すのは得意？苦手？", a: "得意です、みんな話して" },
+        { q: "LINEの返信は早い？遅い？", a: "好きな人には早い" },
+        { q: "チームで働くのと一人で働くの、どっちが好き？", a: "本当は一人だけど、チームで働かないとやっていけない" },
+        { q: "仲間に求めるものは？", a: "愛" },
+        { q: "もし一週間何もしなくていいなら何をする？", a: "仕事" },
+        { q: "宝くじ10億円当たったら最初に何をする？", a: "世界一周旅行" },
+        { q: "SNSの自分とリアルの自分、ギャップある？", a: "めちゃくちゃあります、実際に会うと「思ったより静かですね」って、いつも言われます" }
       ]
     }
   ],
@@ -335,20 +335,20 @@ const faqData = {
     {
       category: "faqCatFood",
       items: [
-        { q: "Favorite foods?", a: "Stew, pumpkin salad, Kiri lemon, and salad bowl shops." },
-        { q: "Convenience store snack you always buy?", a: "Poiful. Poiful." },
-        { q: "Breakfast person or dinner person?", a: "I skip breakfast, so I'm a dinner person." },
+        { q: "Favorite foods?", a: "Stew, Kiri lemon, and salad bowls" },
+        { q: "Favorite snack?", a: "Poiful" },
+        { q: "Sweet or savory?", a: "Sweet" },
         { q: "Coffee or tea?", a: "Coffee. But I also love black tea and soba tea." },
         { q: "Favorite cuisine?", a: "Italian." },
         { q: "What do you eat when stressed?", a: "Peyang yakisoba." },
-        { q: "Best thing you've ever eaten?", a: "Torachi beer." },
-        { q: "Morning person or night owl?", a: "Morning-ish. I wake up around 10:30." },
-        { q: "Favorite time of day?", a: "Afternoon." },
+        { q: "Something delicious you've had?", a: "Sorachi Beer (a local beer from Hokkaido)" },
+        { q: "Morning person or night owl?", a: "I'm a good sleeper" },
+        { q: "Favorite time of day?", a: "Around 3 PM — workout time!" },
         { q: "How do you spend days off?", a: "I don't have days off. …Just kidding. I travel, check trends, and read." },
         { q: "Domestic or international travel?", a: "Mostly domestic, but I want to go abroad more." },
         { q: "Country you want to visit?", a: "Finland." },
         { q: "Do you exercise?", a: "A lot. Running, strength training, yoga." },
-        { q: "Most-used app on your phone?", a: "ChatGPT." },
+        { q: "Apps you use most on your phone?", a: "ChatGPT and Obsidian" },
         { q: "What's special about your room?", a: "The desk I've used since elementary school." },
         { q: "One thing you'd bring to a deserted island?", a: "A beautiful woman." },
         { q: "First thing you do when you wake up?", a: "Go to the bathroom." }
@@ -362,10 +362,10 @@ const faqData = {
         { q: "Are you a perfectionist?", a: "Maybe a casual one among perfectionists. I think at work, but go by instinct in private." },
         { q: "Alone time or time with people?", a: "I like being with people." },
         { q: "Something you've recently realized matters?", a: "Curiosity." },
-        { q: "Someone you respect?", a: "Harumi Deguchi." },
+        { q: "Someone you respect?", a: "Jirome Deguchi" },
         { q: "Dream job as a kid?", a: "Window cleaner." },
         { q: "Who do you want to be in 10 years?", a: "Someone worthy of a statue." },
-        { q: "One superpower you'd want?", a: "Something like Doraemon's Anywhere Door. Actually, Zoom — teleport anywhere." },
+        { q: "One superpower you'd want?", a: "The power to go anywhere!" },
         { q: "One LINE message to your past self?", a: "Hang in there." },
         { q: "The weirdest thing you've been told you are?", a: "When I danced alone in front of the whole class during culture festival practice." }
       ]
@@ -373,7 +373,7 @@ const faqData = {
     {
       category: "faqCatWork",
       items: [
-        { q: "Do you listen to music while working?", a: "Not while I'm working." },
+        { q: "Do you listen to music while working?", a: "I don't listen to music while working" },
         { q: "Where do you usually work?", a: "At my desk. The one from elementary school." },
         { q: "How many hours a day on your PC?", a: "About 10 hours." },
         { q: "What do you do between work sessions?", a: "I walk around." },
@@ -381,7 +381,7 @@ const faqData = {
         { q: "When does motivation go down?", a: "When things feel routine, among other things." },
         { q: "What's the most fun part of work?", a: "When I hit a goal." },
         { q: "What's the hardest part of work?", a: "When I can't hit a goal." },
-        { q: "Where is your mind during meetings?", a: "Where is my mind? Never thought about that. I'm fully focused on every meeting. Trying to look serious and cool." }
+        { q: "Where is your mind during meetings?", a: "Fully focused on every meeting (serious)" }
       ]
     },
     {
@@ -389,9 +389,9 @@ const faqData = {
       items: [
         { q: "Favorite YouTuber or creator?", a: "Tokai On Air." },
         { q: "Recent movie or drama recommendation?", a: "Offline Love." },
-        { q: "Favorite music genres?", a: "Male idols, K-Pop, J-POP." },
+        { q: "Favorite music genres?", a: "Male idols (J-POP)" },
         { q: "Karaoke go-to song?", a: "CHAGE and ASKA's \"Say Yes\"." },
-        { q: "Do you play games?", a: "I would if I did. I usually don't, but I've been playing Dragon Quest lately." },
+        { q: "Do you play games?", a: "I usually don't, but I've been playing Dragon Quest lately" },
         { q: "Do you read books?", a: "Yes. I love every genre." }
       ]
     },
@@ -421,40 +421,41 @@ function renderFaq(language) {
   faqList.innerHTML = categories
     .map((category, categoryIndex) => {
       const title = dictionary[category.category] || category.category;
+      const panelId = `faq-category-${categoryIndex}`;
       const items = category.items
-        .map((item, itemIndex) => {
-          const id = `faq-${categoryIndex}-${itemIndex}`;
-          return `
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false" aria-controls="${id}">
-                <span>${item.q}</span>
-                <span aria-hidden="true">+</span>
-              </button>
-              <div class="faq-answer" id="${id}" role="region" aria-label="${item.q}">
-                <div class="faq-answer-inner">
-                  <p>${item.a}</p>
-                </div>
-              </div>
-            </article>
-          `;
-        })
+        .map(
+          (item) => `
+            <div class="faq-qa">
+              <p class="faq-q">${item.q}</p>
+              <p class="faq-a">${item.a}</p>
+            </div>
+          `
+        )
         .join("");
 
       return `
-        <section class="faq-category">
-          <h3 class="faq-category-title">${title}</h3>
-          <div class="faq-items">${items}</div>
-        </section>
+        <article class="faq-category">
+          <button class="faq-category-toggle" type="button" aria-expanded="false" aria-controls="${panelId}">
+            <span class="faq-category-label">${title}</span>
+            <span class="faq-category-meta">
+              <span class="faq-category-count">${category.items.length}</span>
+              <span class="faq-category-icon" aria-hidden="true">+</span>
+            </span>
+          </button>
+          <div class="faq-category-panel" id="${panelId}" role="region" aria-label="${title}">
+            <div class="faq-category-panel-inner">
+              <div class="faq-items">${items}</div>
+            </div>
+          </div>
+        </article>
       `;
     })
     .join("");
 
-  faqList.querySelectorAll(".faq-question").forEach((button) => {
+  faqList.querySelectorAll(".faq-category-toggle").forEach((button) => {
     button.addEventListener("click", () => {
-      const item = button.closest(".faq-item");
-      const panel = item.querySelector(".faq-answer");
-      const isOpen = item.classList.toggle("is-open");
-
+      const category = button.closest(".faq-category");
+      const isOpen = category.classList.toggle("is-open");
       button.setAttribute("aria-expanded", String(isOpen));
     });
   });
