@@ -273,7 +273,7 @@ const faqData = {
         { q: "運動はする？", a: "めっちゃします、ランニング、筋トレ、ヨガ" },
         { q: "スマホでよく使うアプリは？", a: "ChatGPTとObsidian" },
         { q: "部屋のこだわりポイントは？", a: "小学生の頃から使っている机" },
-        { q: "無人島に1つだけ持っていくなら？", a: "綺麗なお姉さん" },
+        { q: "無人島に1つだけ持っていくなら？", a: "愛するパートナー" },
         { q: "起きて最初にすることは？", a: "うんち" }
       ]
     },
@@ -350,7 +350,7 @@ const faqData = {
         { q: "Do you exercise?", a: "A lot. Running, strength training, yoga." },
         { q: "Apps you use most on your phone?", a: "ChatGPT and Obsidian" },
         { q: "What's special about your room?", a: "The desk I've used since elementary school." },
-        { q: "One thing you'd bring to a deserted island?", a: "A beautiful woman." },
+        { q: "One thing you'd bring to a deserted island?", a: "My partner." },
         { q: "First thing you do when you wake up?", a: "Go to the bathroom." }
       ]
     },
