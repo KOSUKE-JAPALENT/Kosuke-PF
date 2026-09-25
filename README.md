@@ -6,6 +6,20 @@
 
 `index.html` をブラウザで開いてください。ローカルサーバーを使う場合は、このフォルダをルートにして配信します。
 
+## Vercel で公開（GitHub 連携）
+
+1. [Vercel](https://vercel.com) に GitHub アカウントでログイン
+2. **Add New → Project** → リポジトリ **KOSUKE-JAPALENT/Kosuke-PF** を Import
+3. 設定（静的サイトのためビルド不要）
+   - **Framework Preset:** Other
+   - **Root Directory:** `./`（リポジトリ直下）
+   - **Build Command:** 空
+   - **Output Directory:** 空（または `.`）
+   - **Install Command:** 空
+4. **Deploy** → `main` への push のたびに自動デプロイ
+
+`vercel.json` を同梱しているので、上記のまま Import すれば動きます。
+
 ## 公開前に確認する項目
 
 - YouTube登録者数・総再生数
