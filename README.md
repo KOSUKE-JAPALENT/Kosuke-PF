@@ -1,6 +1,6 @@
 # 鈴木孝輔 ポートフォリオ
 
-日英切替対応の静的Webサイトです。ビルド作業や外部ライブラリは不要です。
+日英切替対応の静的Webサイトです。**記事欄**は Markdown 正本 → ビルドで HTML 生成（Vercel デプロイ時に自動実行）です。
 
 ## 確認方法
 
@@ -10,12 +10,12 @@
 
 1. [Vercel](https://vercel.com) に GitHub アカウントでログイン
 2. **Add New → Project** → リポジトリ **KOSUKE-JAPALENT/Kosuke-PF** を Import
-3. 設定（静的サイトのためビルド不要）
+3. 設定
    - **Framework Preset:** Other
    - **Root Directory:** `./`（リポジトリ直下）
-   - **Build Command:** 空
-   - **Output Directory:** 空（または `.`）
-   - **Install Command:** 空
+   - **Build Command:** `npm run build`（`vercel.json` 同梱）
+   - **Output Directory:** `.`
+   - **Install Command:** `npm install`
 4. **Deploy** → `main` への push のたびに自動デプロイ
 
 `vercel.json` を同梱しているので、上記のまま Import すれば動きます。
@@ -29,6 +29,12 @@
 - X「海外リモートワーク25選」の記事個別URL
 - LinkWay・リモート出稼ぎ大学の個別ページURL
 - 1on1予約ページを使う場合は、問い合わせボタンのリンク先
+
+## 記事（SEO用ブログ）
+
+- 正本: `content/articles/*.md`（手順: 同フォルダの `README.md`）
+- 公開URL: `/articles/`（一覧）、`/articles/{slug}/`（個別）
+- ローカル生成: リポジトリ直下で `npm run build:articles`（Node のみ、追加パッケージ不要）
 
 ## 主なファイル
 

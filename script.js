@@ -7,6 +7,7 @@ const translations = {
     navImpact: "IMPACT",
     navNews: "NEWS",
     navMedia: "MEDIA",
+    navArticles: "ARTICLES",
     navVision: "VISION",
     navContact: "CONTACT",
     heroTagline: "「日本を愛する2000年生まれの起業家」",
@@ -94,6 +95,11 @@ const translations = {
     newsTag3: "会社設立",
     newsItem3: "株式会社Japalentを設立しました",
     newsMore: "すべてのお知らせを見る ↗",
+    articlesEyebrow: "ARTICLES",
+    articlesTitle: "海外リモートの<br><em>記事アーカイブ。</em>",
+    articlesIntro: "始め方・案件獲得・キャリアの考え方を、検索にも残る形でまとめていきます。",
+    articlesCta: "記事一覧を見る",
+    articlesNote: "",
     mediaEyebrow: "MEDIA & IDEAS",
     mediaTitle: "情報発信を、<br><em>一番大事にしています。</em>",
     mediaIntro: "海外リモートの具体的な始め方から、事業の現在地まで。YouTube、X、LinkedInで発信しています。",
@@ -123,6 +129,7 @@ const translations = {
     contactEmail: "メールで問い合わせる",
     contactLinkedin: "LinkedInでつながる",
     footerRole: "株式会社Japalent 代表取締役",
+    footerArticles: "記事",
     mobileCta: "一緒に話す"
   },
   en: {
@@ -133,6 +140,7 @@ const translations = {
     navImpact: "IMPACT",
     navNews: "NEWS",
     navMedia: "MEDIA",
+    navArticles: "ARTICLES",
     navVision: "VISION",
     navContact: "CONTACT",
     heroTagline: "\"A 2000-born entrepreneur who loves Japan\"",
@@ -220,6 +228,11 @@ const translations = {
     newsTag3: "Company",
     newsItem3: "Japalent Inc. has been founded",
     newsMore: "View all news on Japalent.com ↗",
+    articlesEyebrow: "ARTICLES",
+    articlesTitle: "Articles on<br><em>global remote work.</em>",
+    articlesIntro: "How to start, land clients, and think about your career — written for search and for people who find me later.",
+    articlesCta: "Browse articles",
+    articlesNote: "",
     mediaEyebrow: "MEDIA & IDEAS",
     mediaTitle: "Sharing openly<br><em>is what matters most.</em>",
     mediaIntro: "From practical guides to global remote work to the latest chapter of our business, I share openly on YouTube, X, and LinkedIn.",
@@ -249,6 +262,7 @@ const translations = {
     contactEmail: "Send me an email",
     contactLinkedin: "Connect on LinkedIn",
     footerRole: "Founder & CEO, Japalent Inc.",
+    footerArticles: "Articles",
     mobileCta: "Let's talk"
   }
 };
@@ -515,7 +529,7 @@ window.addEventListener("scroll", () => {
 }, { passive: true });
 
 const sectionNavLinks = document.querySelectorAll(".section-nav a");
-const sections = ["story", "remote", "work", "impact", "news", "media", "vision", "faq"].map((id) => document.getElementById(id));
+const sections = ["story", "remote", "work", "impact", "articles", "news", "media", "vision", "faq"].map((id) => document.getElementById(id));
 
 const sectionObserver = new IntersectionObserver(
   (entries) => {
