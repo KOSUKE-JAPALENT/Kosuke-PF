@@ -4,44 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="鈴木孝輔（こうすけ）の記事一覧。海外リモートワークとキャリアに関するノウハウ。">
-  <title>記事｜鈴木孝輔</title>
+  <title>記事一覧｜鈴木孝輔</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=12">
-  <link rel="stylesheet" href="articles/articles.css?v=1">
+  <link rel="stylesheet" href="../styles.css?v=12">
+  <link rel="stylesheet" href="articles.css?v=3">
 </head>
-<body class="articles-page">
+<body class="articles-page articles-page--index">
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header is-scrolled articles-header">
-    <a class="brand" href="index.html" aria-label="ポートフォリオトップ">
+    <a class="brand" href="../index.html" aria-label="ポートフォリオトップ">
       <span class="brand-serif">Kosuke</span>
       <span class="brand-serif brand-serif-sub">Suzuki</span>
     </a>
     <nav class="desktop-nav articles-nav" aria-label="記事ナビゲーション">
-      <a href="index.html">PORTFOLIO</a>
-      <a href="./index.html" aria-current="page">ARTICLES</a>
+      <a href="../index.html">PORTFOLIO</a>
+      <a href="index.html" aria-current="page">ARTICLES</a>
     </nav>
     <div class="articles-header-spacer" aria-hidden="true"></div>
   </header>
   <main id="main" class="articles-main">
 
     <div class="articles-index">
-      <header class="section-intro reveal">
+      <header class="articles-index-hero">
         <p class="eyebrow">ARTICLES</p>
-        <h1>記事</h1>
-        <p class="section-lead">海外リモートワークの始め方・案件獲得・キャリアの考え方など。SEO向けに、こうすけの発信を記事として残していきます。</p>
+        <h1>記事一覧</h1>
+        <p class="articles-index-lead">海外リモートワークの始め方・案件獲得・キャリア。一覧から選んで、本文をそのまま読めます。</p>
+        <p class="articles-index-count">1件の記事</p>
       </header>
-      <div class="articles-grid">
-        <a class="articles-card" href="./linkedin-overseas-clients-3-steps/">
-          <div class="articles-card-meta">
-            <time datetime="2025-06-10">2025.06.10</time>
-          </div>
-          <h2>LinkedInで海外案件のオファーを集める3ステップ</h2>
-          <p>プロフィールのキーワード設計、営業ページ化、週2投稿。海外クライアントから仕事が届く状態を作る実践法。</p>
-          <span class="articles-card-arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
+      <ol class="articles-list">
+        <li class="articles-list-item is-featured">
+          <a class="articles-list-link" href="./linkedin-overseas-clients-3-steps/">
+            <div class="articles-list-top">
+              <time datetime="2025-06-10">2025.06.10</time>
+              <span class="articles-list-tag">LinkedIn</span>
+            </div>
+            <h2 class="articles-list-title">LinkedInで自動的に海外案件を集めまくる方法</h2>
+            <p class="articles-list-excerpt">プロフィールのキーワード設計、営業ページ化、週2投稿。海外クライアントから仕事が届く状態を作る3ステップ。</p>
+            <span class="articles-list-cta">続きを読む <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+      </ol>
     </div>
   </main>
   <footer class="site-footer articles-footer">
@@ -50,7 +54,7 @@
       <span>株式会社Japalent 代表取締役</span>
     </div>
     <div class="footer-links">
-      <a href="index.html">ポートフォリオへ</a>
+      <a href="../index.html">ポートフォリオへ</a>
       <a href="https://www.japalent.com/" target="_blank" rel="noopener">Japalent</a>
     </div>
     <p>© 2026 Kosuke Suzuki</p>

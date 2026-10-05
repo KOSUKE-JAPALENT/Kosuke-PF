@@ -1,12 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { markdownToHtml } from "./markdown-lite.mjs";
+import { excerptFromMarkdown, markdownToHtml } from "./markdown-lite.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const contentDir = path.join(root, "content", "articles");
 const outDir = path.join(root, "articles");
+const CSS_V = "3";
 
 function escapeHtml(value) {
   return String(value)
@@ -50,10 +51,41 @@ function formatDateJa(isoDate) {
   return `${y}.${String(m).padStart(2, "0")}.${String(d).padStart(2, "0")}`;
 }
 
-function articleShell({ title, description, bodyHtml, depth, backLabel }) {
-  const prefix = depth === 0 ? "" : "../".repeat(depth);
+function assetPaths(depth) {
+  if (depth === 0) {
+    return {
+      portfolio: "../index.html",
+      articles: "index.html",
+      styles: "../styles.css",
+      articlesCss: "articles.css",
+    };
+  }
+  return {
+    portfolio: "../../index.html",
+    articles: "../index.html",
+    styles: "../../styles.css",
+    articlesCss: "../articles.css",
+  };
+}
+
+function articleShell({
+  title,
+  description,
+  bodyHtml,
+  depth,
+  backLabel,
+  pageKind,
+  articlesNavCurrent,
+}) {
+  const paths = assetPaths(depth);
   const metaTitle = escapeHtml(title);
   const metaDesc = escapeHtml(description || title);
+  const bodyClass =
+    pageKind === "index" ? "articles-page articles-page--index" : "articles-page articles-page--post";
+
+  const articlesHref = paths.articles;
+  const articlesCurrent =
+    articlesNavCurrent === "articles" ? ` href="${articlesHref}" aria-current="page"` : ` href="${articlesHref}"`;
 
   return `<!doctype html>
 <html lang="ja">
@@ -65,19 +97,19 @@ function articleShell({ title, description, bodyHtml, depth, backLabel }) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="${prefix}styles.css?v=12">
-  <link rel="stylesheet" href="${prefix}articles/articles.css?v=1">
+  <link rel="stylesheet" href="${paths.styles}?v=12">
+  <link rel="stylesheet" href="${paths.articlesCss}?v=${CSS_V}">
 </head>
-<body class="articles-page">
+<body class="${bodyClass}">
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header is-scrolled articles-header">
-    <a class="brand" href="${prefix}index.html" aria-label="ポートフォリオトップ">
+    <a class="brand" href="${paths.portfolio}" aria-label="ポートフォリオトップ">
       <span class="brand-serif">Kosuke</span>
       <span class="brand-serif brand-serif-sub">Suzuki</span>
     </a>
     <nav class="desktop-nav articles-nav" aria-label="記事ナビゲーション">
-      <a href="${prefix}index.html">PORTFOLIO</a>
-      <a href="${depth === 0 ? "./" : "../"}index.html" aria-current="page">ARTICLES</a>
+      <a href="${paths.portfolio}">PORTFOLIO</a>
+      <a${articlesCurrent}>ARTICLES</a>
     </nav>
     <div class="articles-header-spacer" aria-hidden="true"></div>
   </header>
@@ -90,7 +122,7 @@ ${bodyHtml}
       <span>株式会社Japalent 代表取締役</span>
     </div>
     <div class="footer-links">
-      <a href="${prefix}index.html">${escapeHtml(backLabel)}</a>
+      <a href="${paths.portfolio}">${escapeHtml(backLabel)}</a>
       <a href="https://www.japalent.com/" target="_blank" rel="noopener">Japalent</a>
     </div>
     <p>© 2026 Kosuke Suzuki</p>
@@ -124,13 +156,23 @@ function loadArticles() {
     const title = String(data.title || slug).trim();
     const date = String(data.date || "").trim();
     const description = String(data.description || "").trim();
+    const tag = String(data.tag || "").trim();
 
     if (!slug || !title) {
       console.warn(`[skip] ${file}: title and slug are required when draft is false`);
       continue;
     }
 
-    articles.push({ slug, title, date, description, body, sourceFile: file });
+    articles.push({
+      slug,
+      title,
+      date,
+      description,
+      tag,
+      body,
+      excerpt: description || excerptFromMarkdown(body),
+      sourceFile: file,
+    });
   }
 
   articles.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
@@ -158,25 +200,35 @@ cleanGeneratedSlugs(keepSlugs);
 
 for (const article of articles) {
   const htmlBody = markdownToHtml(article.body);
+  const tagHtml = article.tag
+    ? `<span class="article-single-tag">${escapeHtml(article.tag)}</span>`
+    : "";
+
   const articleMain = `
     <article class="article-single">
       <header class="article-single-header">
-        <p class="eyebrow">ARTICLE</p>
+        <div class="article-single-meta">
+          ${tagHtml}
+          ${article.date ? `<time datetime="${escapeHtml(article.date)}">${formatDateJa(article.date)}</time>` : ""}
+        </div>
         <h1>${escapeHtml(article.title)}</h1>
-        ${article.date ? `<p class="article-single-date"><time datetime="${escapeHtml(article.date)}">${formatDateJa(article.date)}</time></p>` : ""}
       </header>
       <div class="article-prose">
         ${htmlBody}
       </div>
-      <p class="article-back"><a href="../index.html">← 記事一覧へ</a></p>
+      <footer class="article-single-footer">
+        <a class="article-back-link" href="../index.html">← 記事一覧へ</a>
+      </footer>
     </article>`;
 
   const page = articleShell({
     title: article.title,
-    description: article.description || article.title,
+    description: article.description || article.excerpt,
     bodyHtml: articleMain,
     depth: 1,
     backLabel: "ポートフォリオへ",
+    pageKind: "post",
+    articlesNavCurrent: "articles",
   });
 
   writeFileEnsuringDir(path.join(outDir, article.slug, "index.html"), page);
@@ -184,50 +236,58 @@ for (const article of articles) {
 
 const listItems =
   articles.length === 0
-    ? `<div class="articles-empty reveal">
+    ? `<div class="articles-empty">
         <p>記事は準備中です。海外リモートワークのノウハウや実践記を、順次公開していきます。</p>
         <a class="button button-outline" href="../index.html">ポートフォリオトップへ</a>
       </div>`
-    : `<div class="articles-grid">
+    : `<ol class="articles-list">
         ${articles
           .map(
-            (a) => `<a class="articles-card" href="./${escapeHtml(a.slug)}/">
-          <div class="articles-card-meta">
-            ${a.date ? `<time datetime="${escapeHtml(a.date)}">${formatDateJa(a.date)}</time>` : ""}
-          </div>
-          <h2>${escapeHtml(a.title)}</h2>
-          ${a.description ? `<p>${escapeHtml(a.description)}</p>` : ""}
-          <span class="articles-card-arrow" aria-hidden="true">→</span>
-        </a>`
+            (a, index) => `<li class="articles-list-item${index === 0 ? " is-featured" : ""}">
+          <a class="articles-list-link" href="./${escapeHtml(a.slug)}/">
+            <div class="articles-list-top">
+              ${a.date ? `<time datetime="${escapeHtml(a.date)}">${formatDateJa(a.date)}</time>` : ""}
+              ${a.tag ? `<span class="articles-list-tag">${escapeHtml(a.tag)}</span>` : ""}
+            </div>
+            <h2 class="articles-list-title">${escapeHtml(a.title)}</h2>
+            <p class="articles-list-excerpt">${escapeHtml(a.excerpt)}</p>
+            <span class="articles-list-cta">続きを読む <span aria-hidden="true">→</span></span>
+          </a>
+        </li>`
           )
           .join("\n")}
-      </div>`;
+      </ol>`;
 
 const indexBody = `
     <div class="articles-index">
-      <header class="section-intro reveal">
+      <header class="articles-index-hero">
         <p class="eyebrow">ARTICLES</p>
-        <h1>記事</h1>
-        <p class="section-lead">海外リモートワークの始め方・案件獲得・キャリアの考え方など。SEO向けに、こうすけの発信を記事として残していきます。</p>
+        <h1>記事一覧</h1>
+        <p class="articles-index-lead">海外リモートワークの始め方・案件獲得・キャリア。一覧から選んで、本文をそのまま読めます。</p>
+        <p class="articles-index-count">${articles.length}件の記事</p>
       </header>
       ${listItems}
     </div>`;
 
 const indexPage = articleShell({
-  title: "記事",
+  title: "記事一覧",
   description: "鈴木孝輔（こうすけ）の記事一覧。海外リモートワークとキャリアに関するノウハウ。",
   bodyHtml: indexBody,
   depth: 0,
   backLabel: "ポートフォリオへ",
+  pageKind: "index",
+  articlesNavCurrent: "articles",
 });
 
 writeFileEnsuringDir(path.join(outDir, "index.html"), indexPage);
 
-const manifest = articles.map(({ slug, title, date, description }) => ({
+const manifest = articles.map(({ slug, title, date, description, tag, excerpt }) => ({
   slug,
   title,
   date,
   description,
+  tag,
+  excerpt,
 }));
 writeFileEnsuringDir(path.join(outDir, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
 
