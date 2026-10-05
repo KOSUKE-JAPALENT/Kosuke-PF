@@ -210,6 +210,16 @@ body.articles-page {
   text-align: center;
 }
 
+.articles-teaser-note a {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.articles-teaser-note a:hover {
+  color: var(--white);
+}
+
 .articles-teaser-note:empty {
   display: none;
 }
